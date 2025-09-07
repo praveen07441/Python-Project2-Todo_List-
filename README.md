@@ -15,11 +15,9 @@ import os
 todo_list = []
 
 def clear_screen():
-    """Clear the console screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def show_tasks():   # """Display all tasks in the todo list."""
-   
+def show_tasks():  
     if not todo_list:
         print("No tasks yet")
     else:
