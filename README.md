@@ -9,12 +9,9 @@ You can **view**, **add**, and **delete** tasks interactively.
 - Delete tasks by number
 - Console-friendly with clear screen after each action
 
-import os
 
+# Program
 todo_list = []
-
-def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 def show_tasks():
     if not todo_list:
