@@ -18,8 +18,8 @@ def clear_screen():
     """Clear the console screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def show_tasks():
-    """Display all tasks in the todo list."""
+def show_tasks():   # """Display all tasks in the todo list."""
+   
     if not todo_list:
         print("No tasks yet")
     else:
@@ -31,8 +31,8 @@ def add_task(task):
     todo_list.append(task)
     print("Task added")
 
-def delete_task(index):
-    """Delete a task by its number."""
+def delete_task(index):        # """Delete a task by its number."""
+    
     if 0 < index <= len(todo_list):
         removed = todo_list.pop(index - 1)
         print(f"Deleted: {removed}")
