@@ -11,13 +11,12 @@ You can **view**, **add**, and **delete** tasks interactively.
 
 import os
 
-# Initialize an empty todo list
 todo_list = []
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def show_tasks():  
+def show_tasks():
     if not todo_list:
         print("No tasks yet")
     else:
@@ -25,19 +24,16 @@ def show_tasks():
             print(f"{i}. {task}")
 
 def add_task(task):
-    """Add a new task to the todo list."""
     todo_list.append(task)
     print("Task added")
 
-def delete_task(index):        # """Delete a task by its number."""
-    
+def delete_task(index):
     if 0 < index <= len(todo_list):
         removed = todo_list.pop(index - 1)
         print(f"Deleted: {removed}")
     else:
         print("Enter a valid number")
 
-# Main loop
 while True:
     clear_screen()
     print("== TO-DO LIST ==")
@@ -49,7 +45,7 @@ while True:
     try:
         choice = int(input("Choose an option (1-4): "))
     except ValueError:
-        print("Invalid input! Please enter a number 1-4.")
+        print("Invalid input!\nPlease enter a number 1-4.")
         input("\nPress Enter to continue...")
         print("\n")
         continue
@@ -75,4 +71,4 @@ while True:
         print("Invalid Option")
         input("\nPress Enter to continue...")
 
-    print("\n")  # gap after every loop
+    print("\n")
